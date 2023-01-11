@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+tour_planner.access_tour_admin,access_tour_admin,tour_planner.model_tour_admin,base.group_user,1,1,1,1
