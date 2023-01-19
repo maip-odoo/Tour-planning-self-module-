@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+   <data>
+   <record id="des_saputara" model="destination.list">
+        <field name="name">saputara</field>
+   </record>
+   <record id="des_gir" model="destination.list">
+        <field name="name">gir</field>
+   </record>
+   </data>
+</odoo>

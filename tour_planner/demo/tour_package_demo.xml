@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+   <data>
+   <record id="tour_package" model="tour.package">
+        <field name="name">happy holidaysss</field>
+        <field name="price">70000</field>
+        <field name="tour_id" ref="tour_demo1"/>
+        <field name="from_date">2022-01-02</field>
+        <field name="final_date">2022-01-07</field>
+        <field name="destination_ids" eval="[(6,0,[ref('des_saputara'),ref('des_gir')])]"/>
+   </record>
+   <record id="tour_package1" model="tour.package">
+        <field name="name">happy holidaysss1</field>
+        <field name="price">70000</field>
+        <field name="tour_id" ref="tour_demo1"/>
+        <field name="from_date">2022-01-06</field>
+        <field name="final_date">2022-01-14</field>
+   </record>
+   </data>
+</odoo>

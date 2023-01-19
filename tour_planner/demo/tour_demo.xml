@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+   <data>
+   <record id="tour_demo" model="tour.admin">
+        <field name="name">shreenathji</field>
+        <field name="office_name">shreenathji pvt.</field>
+        <field name="office_adress">rajkot</field>
+   </record>
+   <record id="tour_demo1" model="tour.admin">
+        <field name="name">heena</field>
+        <field name="office_name">heena pvt.</field>
+        <field name="office_adress">jamnagar</field>
+   </record>
+   <record id="tour_demo1" model="tour.admin">
+        <field name="name">devika</field>
+        <field name="office_name">debika pvt.</field>
+        <field name="office_adress">ahemdabad</field>
+   </record>
+    </data>
+</odoo>

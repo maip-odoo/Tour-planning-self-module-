@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<odoo>
+  <record id="tour_admin_action" model="ir.actions.act_window">
+    <field name="name">Tour Admin</field>
+    <field name="res_model">tour.admin</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+           Create a new quotation, the first step of a new sale!
+        </p>
+    </field>
+   </record>
+   <record id="tour_package_action" model="ir.actions.act_window">
+    <field name="name">Tour Package</field>
+    <field name="res_model">tour.package</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+          Create a new quotation, the first step of a new sale!
+      </p>
+    </field>
+   </record>
+   <record id="destination_action" model="ir.actions.act_window">
+    <field name="name">Tour Package</field>
+    <field name="res_model">destination.list</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+          Create a new quotation, the first step of a new sale!
+      </p>
+    </field>
+  </record>
+    <record id="tour_booking_action" model="ir.actions.act_window">
+      <field name="name">Tour Booking</field>
+      <field name="res_model">tour.booking</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Create a new quotation, the first step of a new sale!
+        </p>
+      </field>
+  </record>
+  </record>
+    <record id="hotel_info_action" model="ir.actions.act_window">
+      <field name="name">hotel information</field>
+      <field name="res_model">hotel.info</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Create a new quotation, the first step of a new sale!
+        </p>
+      </field>
+  </record>
+<menuitem id="tour_admin_menu_root" name="Tour Planner">
+     <menuitem id="tour_first_level_menu_admin" name="Tour Planner ">
+            <menuitem id="tour_menu_action_property" action="tour_admin_action" name="Admin"/>
+     </menuitem>
+     <menuitem id="tour_first_level_menu_package" name="Tour package">
+            <menuitem id="package_menu_action_property" action="tour_package_action" name="package"/>
+            <menuitem id="action_property_destination" action="destination_action" name="destination"/>
+     </menuitem>
+     <menuitem id="tour_first_level_menu_booking" name="Tour Booking">
+            <menuitem id="tour_booking_action12" action="tour_booking_action" name="Tour Booking"/>
+     </menuitem>
+     <menuitem id="tour_first_level_menu_hotel" name="Hotel">
+            <menuitem id="hotel_booking_action12" action="hotel_info_action" name="Hotel Information"/>
+     </menuitem>
+ </menuitem>
+</odoo>

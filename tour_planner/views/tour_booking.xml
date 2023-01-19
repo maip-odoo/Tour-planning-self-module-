@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<odoo>   
+<record id="view_booking_form" model="ir.ui.view">
+    <field name="name">Tour.Booking</field>
+    <field name="model">tour.booking</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+              <label for="name" string="customer name"/> 
+              <h1>                    
+                <field name="name"/>
+              </h1>
+              <group>
+                <field name="adress"/>
+              </group>
+              <label for="booking_id" string="package Name"/>  
+                <field name="booking_id">
+                    <tree string="package Details">
+                        <field name="name"/>
+                        <field name="price"/>
+                    </tree>
+                </field>
+              <!--<group>
+                <field name="price"/>
+              </group> -->
+             </sheet>
+          </form>
+      </field>
+</record>
+<record id="view_booking_tree" model="ir.ui.view">
+    <field name="name">tour.booking.view.tree</field>
+      <field name="model">tour.booking</field>
+      <field name="arch" type="xml">
+        <tree>
+           <field name="name"/>
+           <field name="adress"/>
+           <!-- <field name="package_id"/>
+           <field name="price"/> -->
+        </tree>
+       </field>
+</record> 
+</odoo>

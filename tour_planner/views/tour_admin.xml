@@ -1,35 +1,15 @@
 <?xml version="1.0"?>
-  <odoo>
-    <record id="tour_admin_action" model="ir.actions.act_window">
-      <field name="name">Tour Admin</field>
-      <field name="res_model">tour.admin</field>
-      <field name="view_mode">tree,form</field>
-      <field name="help" type="html">
-        <p class="o_view_nocontent_smiling_face">
-                  Create a new quotation, the first step of a new sale!
-        </p>
-      </field>
-    </record>
-
-<menuitem id="tour_admin_menu_root" name="Tour Planner">
-     <menuitem id="tour_first_level_menu_file" name="Tour Planner ">
-            <menuitem id="tour_menu_action_property" action="tour_admin_action" name="Admin"/>
-     </menuitem>
- </menuitem>
-
-   
+<odoo>   
  <record id="tour_admin_view" model="ir.ui.view">
     <field name="name">Tour Admin</field>
     <field name="model">tour.admin</field>
     <field name="arch" type="xml">
         <form string="Lost _">
             <sheet>
-             <!-- <header >
-             <field name='state' widget='statusbar' options="{'clickable': '1'}" />
-             </header> -->
+            
                  <h1>
                     <label for="name" string="Name" />
-                        <field name="name" nolable="1"/>
+                    <field name="name" nolable="1"/>
                 </h1>
                 <group>
                 <field name="description"/>
@@ -43,27 +23,31 @@
                 <group>
                 <field name="total_tour"/>
                 </group>
-
+                <notebook>
+                <page string="personal information">
+                <group>
+                <field name="contact"/>
+                </group>
+                <group>
+                <field name="email" widget="email"/>
+                </group>
+                </page>
+                </notebook>
             </sheet>
           </form>
       </field>
   </record>
   <record id="tour_admin_view_tree" model="ir.ui.view">
-        <field name="name">tour.admin.view.tree</field>
-        <field name="model">tour.admin</field>
-        <field name="arch" type="xml">
-            <tree string="Estate_Property">
-                <field name="name"/>
-                <field name="description"/>
-                <field name="office_name"/>
-                <field name="office_adress"/>
-                <field name="total_tour"/>
-            </tree>
-            </field>
-            </record>
-
-
-
-
-
+    <field name="name">tour.admin.view.tree</field>
+      <field name="model">tour.admin</field>
+      <field name="arch" type="xml">
+        <tree string="Estate_Property">
+           <field name="name"/>
+           <field name="description"/>
+           <field name="office_name"/>
+           <field name="office_adress"/>
+           <field name="total_tour"/>
+        </tree>
+       </field>
+  </record>
 </odoo>

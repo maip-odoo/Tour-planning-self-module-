@@ -8,5 +8,7 @@ class tour_admin(models.Model):
       office_name = fields.Char(required=True)
       office_adress = fields.Char(required=True)
       total_tour = fields.Char()
+      email=fields.Char()
+      contact=fields.Integer()
       
 
