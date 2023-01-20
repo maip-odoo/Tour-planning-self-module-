@@ -40,11 +40,11 @@
         </p>
       </field>
   </record>
-  </record>
-    <record id="hotel_info_action" model="ir.actions.act_window">
-      <field name="name">hotel information</field>
-      <field name="res_model">hotel.info</field>
+  <record id="tour_hotel_action" model="ir.actions.act_window">
+      <field name="name">tour hotel</field>
+      <field name="res_model">tour.hotel</field>
       <field name="view_mode">tree,form</field>
+      <field name="context">{"search_default_available_rooms":True}</field>
       <field name="help" type="html">
         <p class="o_view_nocontent_smiling_face">
             Create a new quotation, the first step of a new sale!
@@ -60,10 +60,10 @@
             <menuitem id="action_property_destination" action="destination_action" name="destination"/>
      </menuitem>
      <menuitem id="tour_first_level_menu_booking" name="Tour Booking">
-            <menuitem id="tour_booking_action12" action="tour_booking_action" name="Tour Booking"/>
+            <menuitem id="tour_booking_actionid" action="tour_booking_action" name="Tour Booking"/>
      </menuitem>
      <menuitem id="tour_first_level_menu_hotel" name="Hotel">
-            <menuitem id="hotel_booking_action12" action="hotel_info_action" name="Hotel Information"/>
+            <menuitem id="action_property_hotel" action="tour_hotel_action" name="Hotel Information"/>
      </menuitem>
  </menuitem>
 </odoo>

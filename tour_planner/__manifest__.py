@@ -22,7 +22,8 @@
         'views/tour_menu.xml',
         'views/tour_package.xml',      
         'views/tour_admin.xml',        
-         'views/tour_booking.xml',  
+        'views/tour_booking.xml', 
+        'views/tour_hotel.xml', 
         
      ],
 'auto_install': False  

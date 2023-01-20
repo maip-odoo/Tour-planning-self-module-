@@ -13,16 +13,16 @@
               <group>
                 <field name="adress"/>
               </group>
-              <label for="booking_id" string="package Name"/>  
+              <group>
+                <field name="contact_no"/>
+              </group>
+              <label for="booking_id" string="package Name" options="{'no_quick_create': True, 'no_create_edit' : True}"/>  
                 <field name="booking_id">
                     <tree string="package Details">
                         <field name="name"/>
                         <field name="price"/>
                     </tree>
                 </field>
-              <!--<group>
-                <field name="price"/>
-              </group> -->
              </sheet>
           </form>
       </field>
@@ -36,6 +36,7 @@
            <field name="adress"/>
            <!-- <field name="package_id"/>
            <field name="price"/> -->
+           <field name="contact_no"/>
         </tree>
        </field>
 </record> 

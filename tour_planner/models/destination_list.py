@@ -5,10 +5,10 @@ class destination_list(models.Model):
       _description = "this is for the destination package"
       _order="name"
 
-      # _sql_constraints =[                                                                                      
+      _sql_constraints =[                                                                                      
     
-      #   ('name', 'unique(name)', "A tag name must be unique...!"),
-      # ]
+        ('name', 'unique(name)', "A tag name must be unique...!"),
+      ]
 
       name = fields.Char(required=True)
       color=fields.Integer('color')

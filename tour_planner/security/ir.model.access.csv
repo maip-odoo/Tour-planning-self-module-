@@ -3,4 +3,5 @@ tour_planner.access_tour_admin,access_tour_admin,tour_planner.model_tour_admin,b
 tour_planner.access_tour_package,access_tour_package,tour_planner.model_tour_package,base.group_user,1,1,1,1
 tour_planner.access_destination_list,access_destination_list,tour_planner.model_destination_list,base.group_user,1,1,1,1
 tour_planner.access_tour_booking,access_tour_booking,tour_planner.model_tour_booking,base.group_user,1,1,1,1
+tour_planner.access_tour_hotel,access_tour_hotel,tour_planner.model_tour_hotel,base.group_user,1,1,1,1
 

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<odoo>   
+<record id="view_hotel_form" model="ir.ui.view">
+    <field name="name">Hotel.Info</field>
+    <field name="model">tour.hotel</field>
+    <field name="arch" type="xml">
+        <form string="hotel Information">
+            <sheet>
+              <label for="name" string="Hotel Name"/> 
+              <h1>                    
+                <field name="name"/>
+              </h1>
+              <group>
+                <field name="adress"/>
+              </group>
+              <group>
+                <field name="city"/>
+              </group>
+              <group>
+                <field name="state"/>
+              </group>
+              <group>
+                <field name="image"/>
+              </group>
+              <notebook>
+              <page string="room description">
+               <group>
+                <field name="avl_suitroom"/>
+                <field name="suit_images"/>
+              </group>
+               <group>
+                <field name="avl_guestroom"/>
+                <field name="guest_images"/>
+              </group>
+              <group>
+                <field name="total_rooms"/>
+              </group>
+              </page>
+              </notebook>
+             </sheet>
+          </form>
+      </field>
+</record>
+<record id="view_hotel_tree" model="ir.ui.view">
+    <field name="name">tour.hotel.view.tree</field>
+      <field name="model">tour.hotel</field>
+      <field name="arch" type="xml">
+        <tree>
+           <field name="name"/>
+           <field name="adress"/>
+           <field name="city"/>
+           <field name="state"/>
+           <field name="image" widget="image" class="oe_avatar" options='{"preview_image": "image", "size": [100, 100]}'/>
+           <field name="avl_suitroom"/>
+           <field name="avl_guestroom"/>
+           <field name="total_rooms"/>
+        </tree>
+       </field>
+</record> 
+<record id="hotel_room_search" model="ir.ui.view">
+     <field name="name">hotel.room.search</field>
+     <field name="model">tour.hotel</field>
+     <field name="arch" type="xml">
+       <search string="tour Hotel">
+          <field name="name"/>
+          <field name="adress"/>
+           <field name="city"/>
+           <field name="state"/>
+           <field name="avl_suitroom"/>
+           <field name="avl_guestroom"/>
+           <field name="total_rooms"/>
+            <separator/>
+             <filter string="available" name="available_rooms" domain="[('avl_guestroom','>=','1')]"/>
+             <group expand="1" string="Group By">
+               <filter string="available suitroom" name="avl_suitroom" context="{'group_by':'avl_suitroom'}"/>
+             </group>
+             </search>
+             </field>
+</record>
+</odoo>

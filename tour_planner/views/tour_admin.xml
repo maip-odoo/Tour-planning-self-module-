@@ -5,8 +5,7 @@
     <field name="model">tour.admin</field>
     <field name="arch" type="xml">
         <form string="Lost _">
-            <sheet>
-            
+            <sheet>            
                  <h1>
                     <label for="name" string="Name" />
                     <field name="name" nolable="1"/>
